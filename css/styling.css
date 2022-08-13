@@ -1,0 +1,142 @@
+/* animations */
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem); }
+    80% {
+      transform: translateX(1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem); }
+    80% {
+      transform: translateX(-1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(3rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+
+/* start hero styling */
+.hero-image{max-width:100%;margin: 0 auto}
+.hero-unit-moon-exploration:nth-of-type(1)
+.hero-image:nth-of-type(1)
+{background-image:url(/images/final-frontier_large.jpg)}
+
+.layout{
+    display: flex;
+}
+.hero {
+flex: 33.33%;
+}
+.hero-unit-moon-exploration .hero-image {
+   width: auto;
+   background-position: bottom bottom;
+}
+#space-link{
+    text-decoration: none;
+    color: inherit;
+}
+.right-animation {
+    animation: moveInRight 1.5s ease-out;
+}
+.left-animation {
+    animation: moveInLeft 1.5s ease-out;
+}
+.hero-image:nth-of-type(1) {
+    animation: moveInBottom 1s ease-out;
+}
+    /* Responsive adjustments */
+@media only screen and (max-width: 1440px) {
+.hero-unit-moon-exploration .hero-image {
+    background-size: cover;
+    background-position: 50%;
+}
+}
+@media screen and (max-width: 500px) {
+    .layout {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+
+
+/* start of timeline */
+.section-headline {
+    text-align: center;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.section-headline:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    transition: .2s ease-in-out;
+}
+.space-text:hover {
+    transform: translateY(-.2rem) scale(1.03);
+    transition: .2s ease-in-out;
+}
+.rowHover:hover {
+    transform: translateY(-.5rem) scale(1.03);
+    box-shadow: inset 5px 0 0 0 #54b3d6;
+    transition: .2s ease-in-out;
+}
+.card-title:hover{
+    animation: moveInLeft .75s ease-in-out;
+}
+@media screen and (min-width: 992px) {
+    div.col-lg-6 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8vw;
+      grid-auto-rows: minmax(min-content, max-content);
+      flex: none;
+      max-width: 100%;
+    }
+
+    div.timeline-item .timeline-1 {
+      order: 1;
+
+    }
+    div.timeline-item .timeline-2 {
+      order: 2;
+    }
+    div.timeline-item .timeline-3 {
+      order: 3;
+    }
+    div.timeline-item .timeline-4 {
+      order: 4;
+    }
+    div.timeline-item .timeline-5 {
+        order: 5;
+      }
+      div.timeline-item .timeline-6 {
+        order: 6;
+      }
+}
+@media screen and (max-width: 1440px) {
+    .timeline-2 {
+        margin-top: 20px;
+    }
+}
+
+
+/* gallery section is IE only
+to support older browsers.
+even though, IE is no longer
+downloadable or used. Microsoft
+killed it this year. */
+
+.gallery-photo:hover {
+    opacity: 75%;
+}

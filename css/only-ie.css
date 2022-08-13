@@ -1,0 +1,17 @@
+.image-moon-1 {
+    width: 100%;
+}
+.row .gallery-grid{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: none;
+}
+.gallery-photo {
+    flex: 50%;
+    grid-column: none;
+}
+@media only screen and (min-width: 737px) {
+.grid-third.grid-left {
+    flex: 20%;
+}
+}
